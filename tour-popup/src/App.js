@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Iframe from 'react-iframe';
-import Player from './components/player'
+import Player from './components/player';
 
 
 const imageSrc = "http://localhost:8081/index.html"
@@ -32,10 +32,11 @@ class App extends React.Component {
       <div className="mainPage">
       </div>
 
-      <div className="modalBG">
+      <div className="modalBG" style={this.state.modalHidden ? {animation:"hideModal 1s"} : {animation:"expandModal 1s"}}>
       <button className="previewButton" 
         onClick={this.hideModal}
-        style={this.state.modalHidden ? {width:"auto"} : {width:"100%", borderRadius:"10px 0 0 0"}}>
+        style={this.state.modalHidden ? {width:"auto"} : {width:"100%", borderRadius:"10px 0 0 0"}}
+        >
           {this.state.modalHidden ? "Show Preview" : "Hide Preview"}
         </button>
         <div className="modalBody" style={this.state.modalHidden ? {display:"none"} : {display:"block"}}>

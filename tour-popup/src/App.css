@@ -22,10 +22,11 @@
    font-weight:650;
    text-align: left;
    box-sizing: border-box;
-
+   transition: background-color 0.5s, color 0.5s;
  }
+
  .previewButton:hover {
-  background-color: #1f3554; 
+  background-color: #1f3554;
   color: white;
   margin:0;
 
@@ -72,4 +73,28 @@
 
 .audioBox {
   width:50%;
+}
+
+@keyframes expandModal {
+  0% {
+    opacity: 0;
+    transform: translateX(650px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hideModal {
+  0% {
+    width: 700px;
+    background-color: #1f3554;
+  }
+  
+  100% {
+    width: 110px;
+    background-color: white;   
+  }
 }
