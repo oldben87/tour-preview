@@ -35,16 +35,14 @@ class App extends React.Component {
       <div className="modalBG" style={this.state.modalHidden ? {animation:"hideModal 1s"} : {animation:"expandModal 1s"}}>
       <button className="previewButton" 
         onClick={this.hideModal}
-        style={this.state.modalHidden ? {width:"auto"} : {width:"100%", borderRadius:"10px 0 0 0"}}
+        style={this.state.modalHidden ? {borderRadius: "inherit"} : {borderRadius:"10px 0 0 0"}}
         >
           {this.state.modalHidden ? "Show Preview" : "Hide Preview"}
         </button>
-        <div className="modalBody" style={this.state.modalHidden ? {display:"none"} : {display:"block"}}>
+        <div className="modalBody" style={this.state.modalHidden ? {display:"none"} : {display:"flex"}}>
           <div className="modalTitle">
-            <h2 className="pageHeader audioBox">Chelsea Physic Garden</h2>
-            
-              <Player />
-            
+            <h2 className="pageHeader">Chelsea Physic Garden</h2>
+            <Player />
           </div>
           <div className="modalBorder"/>
           <div className="iframeBox">
