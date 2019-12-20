@@ -54,7 +54,7 @@ class Slideshow extends React.Component {
       this.state.index % this.props.photos.length
     ];
     return (
-      
+      <View>
         <View style={styles.wrapper}>
           <Background uri={current.uri} format={current.format} />
           <View style={styles.controls}>
@@ -68,6 +68,7 @@ class Slideshow extends React.Component {
               <Text style={styles.buttonText}>{'>'}</Text>
             </VrButton>
           </View>
+        </View>
         </View>
    
     );

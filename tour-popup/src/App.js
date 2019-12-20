@@ -6,8 +6,6 @@ import Player from './components/player'
 
 const imageSrc = "http://localhost:8081/index.html"
 
-//../public/ChelseaPhysicTake2.mp3
-
 class App extends React.Component {
 
   constructor(){
@@ -32,23 +30,27 @@ class App extends React.Component {
     
     <div className="App">
       <div className="mainPage">
-        <h1 className="pageHeader" >Audio Tour Previews</h1>
-        <button className="previewButton" onClick={this.hideModal}>{this.state.modalHidden ? "Show Preview" : "Hide Preview"}</button>
       </div>
 
-      <div className="modalBG" style={this.state.modalHidden ? {display:"none"} : {display:"block"}}>
-        <div className="modalBody">
+      <div className="modalBG">
+      <button className="previewButton" 
+        onClick={this.hideModal}
+        style={this.state.modalHidden ? {width:"auto"} : {width:"100%", borderRadius:"10px 0 0 0"}}>
+          {this.state.modalHidden ? "Show Preview" : "Hide Preview"}
+        </button>
+        <div className="modalBody" style={this.state.modalHidden ? {display:"none"} : {display:"block"}}>
           <div className="modalTitle">
-          <h2 className="pageHeader audioBox">Chelsea Physic Garden</h2>
-            <div className="audioBox">
+            <h2 className="pageHeader audioBox">Chelsea Physic Garden</h2>
+            
               <Player />
-            </div>
+            
           </div>
+          <div className="modalBorder"/>
           <div className="iframeBox">
             <Iframe 
               url={imageSrc}
-              width="690px"
-              height="500px"
+              width="698px"
+              height="502px"
               id="myId"
               className="myClassname"
               display="initial"
