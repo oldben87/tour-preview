@@ -10,7 +10,7 @@ class App extends React.Component {
 
   constructor(){
     super()
-    this.state={modalHidden: false}
+    this.state={modalHidden: true}
 
     this.hideModal = this.hideModal.bind(this)
 
